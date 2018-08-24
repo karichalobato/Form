@@ -5,33 +5,59 @@
     <title>Formulario</title>
   </head>
   <body background="https://hipertextual.com/files/2017/03/color-degradado-fondos-degradados-multicolor-51200.jpg">
-    <h1>Form</h1>
+    <h1 align="center">Enter your data</h1>
       <form action="formulario.html" method="GET">
        
-        <div>
-          <p> <strong>Personal </strong></p>
-          <label for="username">Username</label>
-          <input type="text" name="username" placeholder= "write your name" id="username" required >
-        </div>
-        
-        <div>
-          <label for="dateOfBirthday">Date of birthday</label>
-          <input type="text" id="dateOfBirthday" name="dateOfBirthday" value="" placeholder="dd/mm/yyyy" >
-        </div>
-        
-        <div>
-          <label for="favoriteAnimal"> Favorite Animal </label>
-          <select name="favoriteAnimal" id="favoriteAnimal">
-            <option value="Dog" >Dog</option>
-            <option value="Cat" >Cat</option>
-            <option value="Horse" >Horse</option>
-            <option value="Chicken" >Chicken</option>
-            <option value="Hamster" >Hamster</option>
-            <option value="Dolphin" >Dolphin</option>
-        </div>
+        <fieldset>
+            <legend>Categoria</legend>
+            <fieldset>
+                <legend>Personal data</legend>
+                name: <input type="text" name="username" placeholder= "write your name" id="username" pattern="[a-z]{1,15}" title="Username should only contain lowercase letters. e.g. john">
+                Birthday: <input type="date">
+                <label for="favoriteAnimal"> Favorite Animal </label>
+                <select name="favoriteAnimal" id="favoriteAnimal">
+                    <option value="Dog" >Dog</option>
+                    <option value="Cat" >Cat</option>
+                    <option value="Horse" >Horse</option>
+                    <option value="Chicken" >Chicken</option>
+                    <option value="Hamster" >Hamster</option>
+                    <option value="Dolphin" >Dolphin</option>
+                </select>
+            </fieldset> <br> <br> <br>
+
+            <fieldset>
+                <legend>Account</legend>
+                Email: <input type="email" placeholder="enter your email">
+                Password: <input type="password" placeholder="password" required>
+                Verify Password: <input type="password" placeholder="enter your password again" required>
+            </fieldset> <br><br><br>
+
+            <fieldset>
+                <legend>Contact</legend>
+                Address: <input type="text" placeholder="address">
+                City: <select>
+                    <option value="San Salvador" >El Salvador</option>
+                    <option value="Monterrey">Estado Unidos</option>
+                    <option value="Paris" >Mexico</option>
+
+                </select>
+               Country: <select>
+                    <option value="El Salvador" >El Salvador</option>
+                    <option value="Brazil">Estado Unidos</option>
+                    <option value="Mexico" >Mexico</option>
+                    <option value="Colombia" >Colombia</option>
+                    <option value="China" >China</option>
+                    <option value="France" >France</option>
+
+                </select>
+                Phone number: <input type="tel" placeholder="phone number" required pattern="[1-8]{8}" min="8" max="13">
+
+            </fieldset>          
+         
+        </fieldset> 
+
        
         
-
     </form>
   </body>
 </html>
